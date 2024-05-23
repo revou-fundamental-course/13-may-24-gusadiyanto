@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Katiga - Kalkulator Matematik Segitiga</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="assets/font-awesome-4.6.1/css/font-awesome.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" href="assets/images/icon-calculator.png">
+		<script type="text/javascript" src="js/jquery-1.2.3.min.js"></script>		
+		<script src="js/jquery-1.12.3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+	</head>
+	<body>
+        <!--Navbar-->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+                <!--Navbar Header-->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> 
+					</button>
+                    <a class="navbar-brand" href="/"><img src="assets/images/icon-calculator.png" alt="Katiga Logo" title="Katiga - Kalkulator Matematika Segitiga"/></a>
+				</div>
+			</div>
+		</nav>		
+		<div class="jumbotron text-center">
+			<h1>Katiga <small style="color: #d5d5d5 !important;"><br>Kalkulator Matematika Segitiga</small></h1> 			
+		</div>
+        <!--Container-->		
+		<div class="container">
+			<div class="homepage">
+				<div class="text-center">
+					<h2>Welcome to Katiga</h2>
+					<p>Hai Sobat, Selamat datang di Katiga
+					<br/>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling segitiga</p>
+				</div>
+                 <!--Content-->
+				<div class="tab-content">
+                    <div class="row">
+                          <!--Column 1-->
+                        <div class="col-sm-6">
+                            <div class="panel panel-default text-center">
+                                <div class="panel-heading">
+                                    <h2>Luas Segitiga</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <p><img src="assets/images/segitiga.jpg" alt="Luas Segitiga"></p>
+                                    <p class="text-left">Rumus Luas Segitiga yaitu :</p>
+                                    <p><strong>L = 1/2 x a x t</strong></p>
+                                    <p class="text-left">Di mana :<br />L = Luas<br />a = Panjang Alas<br />t = Tinggi</p>
+                                </div>
+                                <div class="panel-footer">
+                                    <h3>Hitung Luas Segitiga</h3>
+                                    <form id="luas-segitiga">
+                                        <input class="form-control" id="alas" name="alas" placeholder="Nilai Alas" type="number" required /><br />
+                                        <input class="form-control" id="tinggi" name="tinggi" placeholder="Nilai Tinggi" type="number" required />
+                                        <br />
+                                        <div id="result-luas-segitiga" class="text-left"></div>
+                                        <button class="btn btn-lg" type="submit">Hitung</button>
+                                        <button class="btn btn-warning" type="reset" onclick="showluassegitiga(0);">Reset</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Kolom 2-->
+                        <div class="col-sm-6">
+                            <div class="panel panel-default text-center">
+                                <div class="panel-heading">
+                                    <h2>Keliling Segitiga</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <p><img src="assets/images/segitiga.jpg" alt="Keliling Segitiga"></p>
+                                    <p class="text-left">Rumus Keliling Segitiga yaitu :</p>
+                                    <p><strong>K = S1 + S2 + S3</strong></p>
+                                    <p class="text-left">Di mana :<br />K = Keliling<br />S1 = Sisi A<br />S2 =  Sisi B<br />S3 = Sisi C</p>
+                                </div>
+                                <div class="panel-footer">
+                                    <h3>Hitung Keliling Segitiga</h3>
+                                    <form id="keliling-segitiga">
+                                        <input class="form-control" id="sisi1" name="sisi1" placeholder="Nilai Sisi A" type="number" required /><br />
+                                        <input class="form-control" id="sisi2" name="sisi2" placeholder="Nilai Sisi B" type="number" required /><br />
+                                        <input class="form-control" id="sisi3" name="sisi3" placeholder="Nilai Sisi C" type="number" required /><br />
+                                        <div id="result-keliling-segitiga" class="text-left"></div>
+                                        <button class="btn btn-lg" type="submit">Hitung</button>
+                                        <button class="btn btn-warning" type="reset" onclick="showkelilingsegitiga(0);">Reset</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>			
+		</div>
+        <!-- Footer -->
+		<footer class="text-center">
+			<p>Copyright 2024 <span class="glyphicon glyphicon-copyright-mark"></span> Katiga All Rights Reserved<br />
+            Made with <span class="glyphicon glyphicon-heart"></span> Powered by <a href="https://agusadiyanto.net" re="nofollow" target="_blank">Agus Adiyanto</a></p>
+		</footer>
+	</body>
+</html>
